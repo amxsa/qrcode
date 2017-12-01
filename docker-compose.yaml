@@ -1,0 +1,9 @@
+czy_business_admin:
+  image: "${image_name}"
+  volumes:
+    - "/etc/localtime:/etc/localtime:ro"
+    - "/data/docker/logs/nginx:/var/log/nginx"
+    - "/data/docker/logs/czy_business_admin/storage/logs/:/var/www/html/storage/logs/"
+  ports:
+    - "8008:8008"
+  restart: always
